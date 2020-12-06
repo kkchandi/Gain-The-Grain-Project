@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gain the Grain</title>
+       <link rel="icon" <img src="https://cdn.glitch.com/0097c3db-cbea-41bc-b2e4-8dcce7961cb5%2Flogo.png?v=1586708516099" alt="logo">
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    </head>
+    <body>
+        {{> new_nav_bar }}
+        <br><br><br><br>
+        <img src="https://cdn.glitch.com/0097c3db-cbea-41bc-b2e4-8dcce7961cb5%2Fblurred%20groceries.png?v=1586632599785" alt="groceries picture" id="image1">
+        <div class="row">
+          <div class="column">
+            <img src="https://cdn.glitch.com/0097c3db-cbea-41bc-b2e4-8dcce7961cb5%2Fgrocer.png?v=1586563324281" alt="grocer picture"><br> 
+            <p> Become a grocer. Buy groceries for those in need, keeping people more susceptible to COVID-19 safe at home.</p>    
+          </div>
+          <div class="column">
+            <img src="https://cdn.glitch.com/0097c3db-cbea-41bc-b2e4-8dcce7961cb5%2Freceiver.png?v=1586565329761" alt="receiver picture"><br>
+<!--             <center><button type="button" onclick="choose_signup_receiver()"> SIGN UP TO BECOME A RECIEVER </button></center> -->
+            <p> Become a receiver. If you are more susceptible to COVID-19, stay safe at home and find a grocer in your vicinity to buy groceries for you. </p>
+          </div> 
+        </div> 
+      
+      {{#if sl}}
+        <h2>You are already logged in</h2>
+        <center><button class="inp" type="button" onclick="logout()">Log Out</button></center>
+      {{else}}
+        <center><button type="button" onclick="redirect()" id="homepagebutton">ACCOUNT</button></center> 
+      {{/if}}
+      
+      <br>
+      <br>
+      <a href="https://www.cdc.gov/coronavirus/2019-nCoV/index.html">
+      <img src="https://cdn.glitch.com/0097c3db-cbea-41bc-b2e4-8dcce7961cb5%2Fcdc%20guidelines.png?v=1586632604290" alt="cdc pic">
+      </a>
+      <br>
+      <br>
+      <br>
+      <br>
+      {{> footer }}
+      <script type="text/javascript" src="client-js/gg.js"></script>
+      <script type="text/javascript">
+        function redirect() {
+          window.location.href = 'https://gain-the-grain2.glitch.me/signup_login'
+        }
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </body>
+</html>

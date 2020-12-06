@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gain the Grain - Log In</title>
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+
+    </head>
+    <body>
+        
+      {{> new_nav_bar }}
+      <br><br>
+      <h1>{{message}}</h1>
+      <div class="form_content" id="switchable"> 
+        <p id="l_username_error_message"></p>
+        <p id="l_password_error_message"></p>
+        <form id="loginform">
+          <h2>Log In</h2>
+          <input class="inp" id="l_username" type="text" name="l_username" placeholder="Username" required> <br><br>
+          <input class="inp" id="l_password" type="password" name="l_password" placeholder="Password" required><br>
+          <div class="slideThree">  
+            <input onclick="login_password()" type="checkbox" value="None" id="slideThree" name="check" checked />
+            <label for="slideThree"></label>
+          </div>
+          <h5>Hide Password</h5>
+          <br>
+          <button class="login" type="button" onclick="login_receiver()" id="buttonsignup">I'm a Receiver</button>
+          <button class="login" type="button" onclick="login_grocer()">I'm a Grocer</button> <br>
+          </form>
+      </div>
+      <br>
+      <br>
+      <br>
+      {{> footer }}
+
+      <script type="text/javascript" src="client-js/gg.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </body>
+</html>
+<!-- -->

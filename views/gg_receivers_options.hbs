@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gain the Grain - Account Status</title>
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    </head>
+    <body>
+        
+      {{> new_nav_bar }}
+      
+      <br><br>
+      
+      <h1>{{message}}</h1>
+      
+      <h1>Recievers near you</h1>
+      <p> Select receivers to bring groceries to. </p>
+      <button id="receiver_person1">
+        Person1
+      </button>
+      <button id="receiver_person2">
+        Person2
+      </button>
+      <button id="receiver_person3">
+        Person3
+      </button>
+      <br>
+      <br>
+        <form class="logoutbuttonform">
+        <button class="inp" type="button" onclick="logout()">Log Out</button> <br>  
+      </form>
+      
+      {{> footer }}
+      <script type="text/javascript" src="client-js/gg.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </body>
+</html>
