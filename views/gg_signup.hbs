@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Gain the Grain - Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arvo" />
+    </head>
+  <body>
+    {{> new_nav_bar }}
+    <br><br>
+    <h1>{{header}}</h1>
+    <p>
+      {{message}}
+    </p>
+    <div id="switchable">
+      <p id="s_error_message"></p>
+      <form id="specificsignupform">
+        <br>
+        <input type="text" id="s_username" name="s_username" placeholder="Username" required>
+        <input type="password" id="s_password" name="s_password" type="password" placeholder="Password" required>
+        <input type="text" id="s_first_name" name="s_first_name" placeholder="First name" required>
+        <input type="text" id="s_last_name" name="s_last_name" placeholder="Last name" required>
+        <input type="text" id="s_email" name="s_email" placeholder="Email" required>
+        <input type="text" id="s_address" name="s_address" placeholder="Address" required>
+        <input type="text" id="s_city" name="s_city" placeholder="City" required>
+        <input type="text" id="s_state" name ="s_state" placeholder="State" required>
+        <input type="text" id="s_zip_code" name="s_zip_code" placeholder="Zip code" required>
+        <br>
+          <div class="slideThree">  
+            <input onclick="signin_password()" type="checkbox" value="None" id="slideThree" name="check" checked />
+            <label for="slideThree"></label>
+          </div>
+          <h5>Hide Password</h5>
+        <button class="inp" id="imareciever" type="button" onclick="signup_receiver()">I'm a Receiver</button>
+        <button class="inp" id="imagrocer" type="button" onclick="signup_grocer()">I'm a Grocer</button>
+      </form>
+    </div>
+    <br><br><br><br>
+    {{> footer }}
+    <script type="text/javascript" src="client-js/gg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </body>
+</html>

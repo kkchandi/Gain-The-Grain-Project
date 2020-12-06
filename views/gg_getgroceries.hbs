@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gain the Grain - Get Groceries</title>
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    </head>
+    <body>
+            
+      {{> new_nav_bar }}
+      <br><br><h1>{{header}}</h1>
+      <h2>Hello, {{user_name}}</h2>
+      <p id="switchable"></p>
+      <p id="add_error_message"></p>
+      <form id="addtolistform">
+        <br>
+        <input type="text" id="grocery_item" name="grocery_item" placeholder="Grocery Item"> <br>
+        <input type="text" id="item_cost" name="item_cost" placeholder="Approximate Cost"> <br>
+        <br>
+        <button class="inp" id="add_list_button" type="button" onclick="add_item_grocery()">Add to list</button>
+        <br>
+        <br>
+<!--         <input type="text" id="del_grocery_item" name="del_grocery_item" placeholder="Grocery Item"> <br>
+        <br>
+        <button class="inp" id="del_list_button" type="button" onclick="del_item_grocery()">Delete from list</button>
+        <br>
+        <br> -->
+      </form> <br> <br> <br>
+
+      <br>
+      <br>
+      <br>
+      <form class="logoutbuttonform">
+        <br>
+        <button class="inp" type="button" onclick="logout()">Log Out</button> <br>
+        </form>
+      <br>
+      <br>
+        <br>
+        {{> footer }}
+        <script type="text/javascript" src="client-js/gg.js"></script>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </body>
+</html>

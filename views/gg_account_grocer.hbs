@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gain the Grain - Account Status</title>
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    </head>
+    <body>
+        
+      {{> new_nav_bar }}
+      
+      <br><br><h1>{{message}}</h1>
+      
+      <p>Orders you have chosen to pickup</p>
+      
+        <div id="chosenorders">
+          <table>
+            <tr>
+              <th>Name1</th>
+              <th>Name2</th>
+              <th>Name3</th>
+            </tr>
+            
+            <tr>
+              <td>
+                <p> List of items here</p>
+              </td>
+              <td>
+                <p> List of items here</p>              
+              </td>
+              <td>
+                <p> List of items here</p>              
+              </td>
+            </tr>
+            
+            <tr>
+              <td>Cost: </td>
+              <td>Cost: </td>
+              <td>Cost: </td>
+            </tr>
+            
+            <tr>
+              <td>Address:</td>
+              <td>Address:</td>
+              <td>Address: </td>
+            </tr>
+            
+            <tr>
+              <td>Pickup by:</td>
+              <td>Pickup by:</td>
+              <td>Pickup by:</td>
+            </tr>
+            
+            <tr>
+              <td><button class="inp" type="button" disabled>Mark as done</button></td>
+              <td><button class="inp" type="button" disabled>Mark as done</button></td>
+              <td><button class="inp" type="button" disabled>Mark as done</button></td>
+            </tr>
+
+          </table>
+      </div>
+      <br>
+      <br>
+      <h3> Thank you for your service! We appreciate you putting others first and risking your health to keep your neighborhood healthy. Please stay safe, happy and healthy.</h3><br>
+      <br>
+      <br>
+      <form class="logoutbuttonform">
+        <br>
+        <button class="inp" type="button" onclick="logout()">Log Out</button> <br>  
+      </form>
+
+      <br>
+      {{> footer }}
+      <script type="text/javascript" src="client-js/gg.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </body>
+</html>

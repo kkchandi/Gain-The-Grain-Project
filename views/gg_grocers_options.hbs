@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gain the Grain - Account Status</title>
+        <link rel="stylesheet" type="text/css" href="css/nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="css/gg.css">
+        <link rel="stylesheet" type="text/css" href="css/footer.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+    </head>
+    <body>
+        
+      {{> new_nav_bar }}
+      
+      <br><br>
+      
+      <h1>{{message}}</h1>
+      
+      <h3>Recievers near you</h3>
+      <p> Select receivers to bring groceries to. </p>
+      
+      <div id="chosenorders">
+          <table>
+            <tr>
+              <th>
+                Person
+              </th>
+              <th>
+                Grocery List
+              </th>
+            </tr>
+            {{#each receivers_list}}
+              <tr>
+                <td><button id="grocer_person" disabled>{{this.username}}</button></td>
+                <td>{{this.groceries}}</td>
+              </tr>
+            {{/each}}
+            
+<!--             <tr>
+              <td> 6 miles away <br> Pita bread, hummus, salad <br> Cost: $18 <br> By 4/15 </td>
+              <td><button id="grocer_person1"> Person1 </button></td>
+            </tr>
+    
+            <tr>
+              <td> 15 miles away <br> Pizza dough, tomato sauce, cheese <br> Cost: $25 <br> By 4/21 </td>
+              <td><button id="grocer_person2"> Person2 </button></td>
+            </tr>
+            
+            <tr>
+              <td> 21 miles away <br> Bagels, cream cheese <br> Cost: $9 <br> By 4/13 **URGENT** </td>
+              <td><button id="grocer_person3"> Person3 </button></td>
+            </tr> -->
+          </table>
+      </div>
+
+      <br>
+        <form class="logoutbuttonform">
+          <br>
+        <button class="inp" type="button" onclick="logout()">Log Out</button> <br>  
+      </form>
+      <br>
+      
+      {{> footer }}
+      <script type="text/javascript" src="client-js/gg.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    </body>
+</html>
